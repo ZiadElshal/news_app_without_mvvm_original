@@ -1,0 +1,13 @@
+{
+  "app_title": "News App",
+  "select_date": "Select Date",
+  "settings": "Settings",
+  "language": "Language",
+  "arabic": "Arabic",
+  "english": "English",
+  "theme": "Theme",
+  "light": "Light",
+  "dark": "Dark",
+  "systemDefault": "System Default",
+  "save_changes": "Save changes"
+}
