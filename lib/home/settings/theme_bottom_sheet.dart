@@ -68,10 +68,10 @@ class _ThemeBottomSheetState extends State<ThemeBottomSheet> {
         Text(text,
             style: Theme.of(context).textTheme.labelLarge?.copyWith(
               fontWeight: FontWeight.bold,
-                  color: provider.appTheme == ThemeMode.light
-                      ? AppColors.primaryLightColor
-                      : AppColors.primaryLightColor,
-                )
+              color: provider.appTheme == ThemeMode.light
+                  ? AppColors.primaryLightColor
+                  : AppColors.primaryLightColor,
+            )
         ),
         Icon(
           Icons.check_circle_outline_rounded,
@@ -95,7 +95,7 @@ class _ThemeBottomSheetState extends State<ThemeBottomSheet> {
                   ? AppColors.blackColor
                   : AppColors.whiteColor,
             )
-            ),
+        ),
       ],
     );
   }

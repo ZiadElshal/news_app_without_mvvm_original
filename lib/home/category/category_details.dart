@@ -31,6 +31,10 @@ class _CategoryDetailsState extends State<CategoryDetails> {
             children: [
               Text("Something went wrong"),
               ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: AppColors.primaryLightColor,
+                    foregroundColor: AppColors.whiteColor,
+                  ),
                   onPressed: (){
                     ApiManager.getSources(widget.category.id);
                     setState(() {

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/app_colors.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class HomeDrawer extends StatelessWidget {
   static const int categories = 1;
@@ -15,10 +16,10 @@ class HomeDrawer extends StatelessWidget {
           width: double.infinity,
           height: MediaQuery.of(context).size.height*0.15,
           child: Center(
-            child: Text("News App!",
-            style: Theme.of(context).textTheme.titleLarge?.copyWith(
-              fontSize: 24
-            ),
+            child: Text(AppLocalizations.of(context)!.drawer_title,
+              style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                  fontSize: 24
+              ),
             ),
           ),
           color: AppColors.primaryLightColor,
@@ -34,11 +35,11 @@ class HomeDrawer extends StatelessWidget {
               children: [
                 Icon(Icons.view_list_rounded, size: 35,),
                 SizedBox(width: MediaQuery.of(context).size.width*0.03,),
-                Text("Categories",
-                style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                    fontSize: 24,
-                    color: AppColors.blackColor
-                ),
+                Text(AppLocalizations.of(context)!.categories,
+                  style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                      fontSize: 24,
+                      color: AppColors.blackColor
+                  ),
                 )
               ],
             ),
@@ -54,11 +55,11 @@ class HomeDrawer extends StatelessWidget {
               children: [
                 Icon(Icons.settings, size: 35,),
                 SizedBox(width: MediaQuery.of(context).size.width*0.03,),
-                Text("Settings",
-                style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                    fontSize: 24,
-                    color: AppColors.blackColor
-                ),)
+                Text(AppLocalizations.of(context)!.settings,
+                  style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                      fontSize: 24,
+                      color: AppColors.blackColor
+                  ),)
               ],
             ),
           ),

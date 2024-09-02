@@ -47,6 +47,22 @@ https://newsapi.org/v2/everything?q=bitcoin&apiKey=45669a633b8c4d339dd864f9bc445
     catch(e){
       throw e;
     }
-
   }
+
+  ///func to search by source query
+  static Future<List<News>?> searchNews(String query) async {
+    Uri url = Uri.https(ApiConstants.baseUrl, ApiConstants.newsApiName, {
+      'apiKey': ApiConstants.apiKey,
+      'q': query,
+    });
+    var response = await http.get(url);
+    try {
+      var responseBody = response.body;
+      var json = jsonDecode(responseBody);
+      return NewsResponse.fromJson(json).articles;
+    } catch (e) {
+      throw e;
+    }
+  }
+
 }

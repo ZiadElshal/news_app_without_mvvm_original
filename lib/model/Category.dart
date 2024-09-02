@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/app_colors.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Category{
   String id;
@@ -10,29 +11,27 @@ class Category{
   Category({required this.id, required this.imagePath, required this.tittle,
     required this.color,});
 
-  /*
-          science       technology
-  */
   ///func to make list of category
-  static List<Category> getCategories(){
+  // i pass context parameter to access AppLocalizations
+  static List<Category> getCategories(BuildContext context){
     return [
       Category(id: "sports", imagePath: "assets/images/sports.png",
-          tittle: "Sports", color: AppColors.redColor
+          tittle: AppLocalizations.of(context)!.sports, color: AppColors.redColor
       ),
       Category(id: "general", imagePath: "assets/images/general.png",
-          tittle: "General", color: AppColors.darkBlueColor
+          tittle: AppLocalizations.of(context)!.general, color: AppColors.darkBlueColor
       ),
       Category(id: "health", imagePath: "assets/images/health.png",
-          tittle: "Health", color: AppColors.pinkColor
+          tittle: AppLocalizations.of(context)!.health, color: AppColors.pinkColor
       ),
       Category(id: "business", imagePath: "assets/images/business.png",
-          tittle: "Business", color: AppColors.brownColor
+          tittle: AppLocalizations.of(context)!.business, color: AppColors.brownColor
       ),
       Category(id: "entertainment", imagePath: "assets/images/entertainment.png",
-          tittle: "Entertainment", color: AppColors.blueColor
+          tittle: AppLocalizations.of(context)!.entertainment, color: AppColors.blueColor
       ),
       Category(id: "science", imagePath: "assets/images/science.png",
-          tittle: "Science", color: AppColors.yellowColor
+          tittle: AppLocalizations.of(context)!.science, color: AppColors.yellowColor
       ),
     ];
   }

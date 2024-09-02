@@ -38,9 +38,9 @@ class _LanguageBottomSheetState extends State<LanguageBottomSheet> {
                 ///select arabic
                 child: provider.appLanguage == "ar"
                     ? getSelectedItemWidget(
-                        AppLocalizations.of(context)!.arabic)
+                    AppLocalizations.of(context)!.arabic)
                     : getUnSelectedItemWidget(
-                        AppLocalizations.of(context)!.arabic)
+                    AppLocalizations.of(context)!.arabic)
             ),
             SizedBox(
               height: 15,
@@ -54,9 +54,9 @@ class _LanguageBottomSheetState extends State<LanguageBottomSheet> {
                 ///select english
                 child: provider.appLanguage == "en"
                     ? getSelectedItemWidget(
-                        AppLocalizations.of(context)!.english)
+                    AppLocalizations.of(context)!.english)
                     : getUnSelectedItemWidget(
-                        AppLocalizations.of(context)!.english)
+                    AppLocalizations.of(context)!.english)
             ),
           ],
         ),
@@ -72,10 +72,10 @@ class _LanguageBottomSheetState extends State<LanguageBottomSheet> {
         Text(text,
             style: Theme.of(context).textTheme.labelLarge?.copyWith(
               fontWeight: FontWeight.bold,
-                  color: provider.appTheme == ThemeMode.light
-                      ? AppColors.primaryLightColor
-                      : AppColors.primaryLightColor,
-                )),
+              color: provider.appTheme == ThemeMode.light
+                  ? AppColors.primaryLightColor
+                  : AppColors.primaryLightColor,
+            )),
         Icon(
           Icons.check_circle_outline_rounded,
           color: provider.appTheme == ThemeMode.light
